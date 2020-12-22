@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up - Easy Car Rental Sri Lanka</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assests/frm/css/customCSS/Signup.css">
+    <link rel="icon" href="../assests/img/icons(Logo)/icons8-car-90withback.png">
+    <link rel="stylesheet" href="../assests/frm/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+    <script src="../assests/lib/jquery-3.5.1.min.js"></script>
+    <script src="../assests/frm/js/bootstrap.js"></script>
+    <script src="../assests/frm/js/bootstrap.min.js"></script>
+    <script src="../assests/frm/js/bootstrap.bundle.js"></script>
+
+</head>
+<body>
+
+<!--navbar-->
+<nav class="navbar" id="navbar" style="z-index: 1">
+    <a class="navbar-brand text-light" href="#" id="headerId">
+        <img src="../assests/img/icons(Logo)/icons8-car-90White.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+        Easy Car Rantal
+    </a>
+
+    <div class="btn-group nav-btn">
+        <a class="btn" type="button" href="aboutUs.html" id="aboutusbtn">About us</a>
+        <a class="btn" type="button" href="" id="signupbtn">Sign up</a>
+        <a class="btn" type="button" href="Login.html" id="loginbtn" data-toggle="modal" data-target="#loginmodal">Login</a>
+    </div>
+
+</nav>
+
+<main>
+    <div id="signup" class="">
+        <div class="jumbotron container">
+            <div class="row mb-3">
+                <div class="col" id="col1">
+                    <img src="../assests/img/icons(Logo)/icons8-car-90.png" >
+                    <p>Sign up to Easy Car Rantal</p>
+                </div>
+            </div>
+            <div class="row mb-2">
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="First name" id="fname">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Last name" id="lname">
+                </div>
+            </div>
+            <div class="row mb-2">
+                <div class="col">
+                    <input type="email" class="form-control" placeholder="Email" id="Email">
+                </div>
+                <div class="col">
+                    <label>Upload both sides of NIC/Driving Licence</label>
+                    <input type="file" class="form-control" placeholder="Last name" id="drivingorNIC">
+                </div>
+            </div>
+            <div class="row mb-2">
+                <div class="col">
+                    <input type="number" class="form-control" placeholder="Contact number" id="number">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Customer NIC number" id="NICnum">
+                </div>
+            </div>
+            <div class="row mb-2">
+                <div class="col">
+                    <input type="password" class="form-control" placeholder="Password" id="Password">
+                </div>
+                <div class="col">
+                    <input type="password" class="form-control" placeholder="Confirm Password" id="Passwordconfirm">
+                </div>
+            </div>
+            <div class="row mb-2">
+                <div class="col">
+                    <label id="passwordstatus" style="margin: 0 0 0 0"></label>
+                </div>
+            </div>
+            <div class="row mb-2 ml-2">
+                <div class="col">
+                    <input class="form-check-input" type="checkbox" id="checkaggrement">
+                    <p>By signing in or creating an account, you agree with our Terms & conditions and Privacy statement.</p>
+                </div>
+            </div>
+            <div class="row mb-2">
+                <div class="col">
+                    <input class="btn btn-warning" type="button" id="SignupAction" value="Sign up">
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Modal -->
+<div class="modal fade" id="loginmodal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Login</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col">
+                        <form class="">
+                            <div class="form-group row">
+                                <label for="staticEmail" class="col-sm-6 col-form-label">Email or Username: *</label>
+                                <div class="col-sm-10">
+                                    <input type="email" class="form-control" id="staticEmail">
+                                    <label style="font-size: 11px">Forgot email/username?</label>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputPassword" class="col-sm-5 col-form-label">Password: *</label>
+                                <div class="col-sm-10">
+                                    <input type="password" class="form-control" id="inputPassword">
+                                    <label style="font-size: 11px">Forgot password?</label>
+                                </div>
+                            </div>
+                            <input type="button" class="btn btn-primary col-3" id="loginbtn2" value="Login">
+                        </form>
+                    </div>
+                    <div class="col">
+                        <div class="pt-3 pl-3" id="loginsidebar">
+                            <p style="font-size: 20px; padding-left: 10px; font-family: 'Open Sans', sans-serif; color: white">
+                                Not a member? <br>
+                                FREE to join! With Hertz <br>
+                                Gold Plus Rewards® <br>
+                                booking a car has never <br>
+                                been easier, faster or <br>
+                                more rewarding.
+                            </p>
+                            <p style="font-size: 16px; padding-left: 10px; font-family: 'Open Sans', sans-serif; color: white">
+                                It's Fast <br>
+                                It's Flexible <br>
+                                It's Easy
+                            </p>
+                            <button id="signup3" type="button" class="btn btn-outline-secondary text-light mb-2 ml-5">Join now for free</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--footer-->
+<footer id="footer">
+    <section style="background-color:#2A3852;" class="event-footer">
+
+        <div class="row footer-top">
+
+            <div class="col-xs-12 col-md-2 event-footer-section">
+                <div class="event-footer-Maintitles" style="font-family:'Open Sans', sans-serif; font-size: 20px">
+                    Easy Car Rental
+                </div>
+                <a href="" target="_self">
+                    <div class="event-footer-img"><img src="../assests/img/icons(Logo)/icons8-car-90White.png">
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-xs-12 col-md-4 event-footer-section">
+                <div class="event-footer-Maintitles" style="">
+                    Related Searches
+                </div>
+                <div class="event-footer-content" id="footerlinks2">
+                    <li class="text-light">Genaral car</li>
+                    <li class="text-light">Primium car</li>
+                    <li class="text-light">Luxary car</li>
+                </div>
+
+            </div>
+
+            <div class="col-xs-12 col-md-3 event-footer-section">
+                <div class="event-footer-Maintitles" style="">
+                    Help & Information
+                </div>
+                <div class="event-footer-content" style="">
+                    <li class="text-light">About Us</li>
+                    <li class="text-light">Contact Us</li>
+                    <li class="text-light">Help</li>
+                    <div>
+                        <a href="Signup.html">
+                        <button type="button" class="btn btn-info" style="
+    margin-top: 20px;
+">Sign up</button>
+                    </a></div>
+
+                </div>
+
+            </div>
+
+            <div class="col-xs-12 col-md-3 event-footer-section bottom-social-group">
+
+                <div class="event-footer-Maintitles" style=" ">Find Us On</div>
+                <a class="event-footer-social" title="Facebook link" target="_blank" href="">
+                    <img src="../assests/img/socialicons/icons8-facebook-100.png" width="30px">
+                </a>
+                <a class="event-footer-social" title="Twitter link" target="_blank" href="">
+                    <img src="../assests/img/socialicons/icons8-twitter-96.png" width="30px">
+                </a>
+                <a class="event-footer-social" title="Instagram link" target="_blank" href="">
+                    <img src="../assests/img/socialicons/icons8-instagram-120.png" width="30px">
+                </a>
+                <a class="event-footer-social" title="Youtube link" target="_blank" href="">
+                    <img src="../assests/img/socialicons/icons8-youtube-120.png" width="30px">
+                </a>
+                <br><br>
+            </div>
+
+        </div>
+
+        <div class="row footer-bottom">
+            <div class="event-footer-bottom col-xs-12 col-md-12">
+        <span class="bottom-elements">
+         <span class="bottom-elements">
+           <p>Copyright © 2020 easyrent.com Transport Limited trading as easyrent.com. All rights reserved</p>
+        </span>
+        </span>
+            </div>
+
+        </div>
+
+    </section>
+</footer>
+
+<script src="../assests/frm/js/customjs/Signup.js"></script>
+<script src="../assests/frm/js/customjs/Guest.js"></script>
+</body>
+</html>

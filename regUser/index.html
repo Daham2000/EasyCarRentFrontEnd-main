@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyCarRental - Best Prices, Best Drivers, Best Models, Best Brands all at here</title>
+
+    <link rel="stylesheet" href="../assests/frm/css/customCSS/regUser.css">
+    <link rel="icon" href="../assests/img/icons(Logo)/icons8-car-90withback.png">
+    <link rel="stylesheet" href="../assests/frm/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="../assests/lib/jquery-3.5.1.min.js"></script>
+    <script src="../assests/frm/js/bootstrap.js"></script>
+    <script src="../assests/frm/js/bootstrap.min.js"></script>
+    <script src="../assests/frm/js/bootstrap.bundle.js"></script>
+</head>
+
+<body>
+
+<nav class="navbar" id="navbar" style="z-index: 1">
+    <a class="navbar-brand text-light" href="#" id="headerId">
+        <img src="../assests/img/icons(Logo)/icons8-car-90White.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+        Easy Car Rantal
+    </a>
+
+    <div class="btn-group nav-btn">
+        <a class="btn" type="button" href="aboutUs.html" id="aboutusbtn">About us</a>
+        <a class="btn" type="button" href="" id="notification">
+            <img src="../assests/img/icons(Logo)/icons8-bell.png" alt="" width="22px">
+            Noticication
+        </a>
+        <a class="btn" type="button" href="myProfile.html" id="myprofilebtn">
+            <img src="../assests/img/icons(Logo)/icons8-administrator-male-96.png" alt="" width="22px">
+            My profile
+        </a>
+        <a class="btn" type="button" href="../Guest/index.html" id="loginbtn">Logout</a>
+    </div>
+
+</nav>
+
+<main>
+    <div id="header">
+        <p class="container">Car Hire in Sri Lanka</p>
+    </div>
+    <div class="jumbotron" id="jumbotron">
+        <p class="col-4 text-light" id="headertxt2">Complete the search form below to find cheap car hire in Sri Lanka</p>
+        <div class="jumbotron container" id="jumbotron2">
+            <form>
+                <div class="row mb-2">
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Pickup Location" id="pickuplocation">
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Dropoff Location" id="DropoffLocation">
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col">
+                        <input type="date" class="form-control" placeholder="Pickup date" id="pickupdate">
+                    </div>
+                    <div class="col">
+                        <input type="time" class="form-control" placeholder="Pickup time" id="pickuptime">
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col">
+                        <input type="date" class="form-control" placeholder="Dropoff Date" id="DropoffDate">
+                    </div>
+                    <div class="col">
+                        <input type="time" class="form-control" placeholder="Dropoff Time" id="DropoffTime">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <input class="form-check-input" type="checkbox" id="Doyouneedadriver">
+                        <label class="form-check-label" for="Doyouneedadriver">
+                            Do you need a driver?
+                        </label>
+                    </div>
+                    <div class="col">
+                        <button type="button" class="btn btn-warning" id="searchbtn" data-toggle="modal"
+                                data-target="#staticBackdrop">Search car</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p id="text11">Easy car rental connects you to the biggest brands in car hire.</p>
+            </div>
+            <div class="col" id="brands">
+                <div id="section2imgslogo">
+                    <div>
+                        <img src="../assests/img/CarLogo/bmw-logo-2020-grey.png" alt="" width="50px">
+                        <img src="../assests/img/CarLogo/Mercedeslogo.png" alt="" width="48px">
+                        <img src="../assests/img/CarLogo/1200px-Perodua_logo_2008.svg.png" alt="" width="70px">
+                    </div>
+                    <div id="img2">
+                        <img src="../assests/img/CarLogo/suzuki-logo-5311518DD9-seeklogo.com.png" alt="" width="40px">
+                        <img src="../assests/img/CarLogo/Toyota-logo.png" alt="" width="75px">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Available cars</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col">
+
+                        <div>
+                            <label>Select car type</label>
+                            <select class="form-control form-control-sm col-9" id="Selectcartype">
+                                <option>General</option>
+                                <option>Premium</option>
+                                <option>Luxury</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div>
+                            <label>No of passengers</label>
+                            <select class="form-control form-control-sm col-9" id="Noofpassengers">
+                                <option>2</option>
+                                <option>111</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>18</option>
+                                <option>20</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            <div class="row">
+                <div class="col">
+                    <div>
+                        <label>Transmission type</label>
+                        <select class="form-control form-control-sm col-9" id="Transmissiontype">
+                            <option>Manual</option>
+                            <option>Auto</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        <label>Price (daily)</label>
+                        <select class="form-control form-control-sm col-9" id="Price">
+                            <option>1231</option>
+                            <option>333</option>
+                            <option>3</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+             <div class="row">
+                 <div class="col">
+                     <div>
+                         <label>Brand</label>
+                         <select class="form-control form-control-sm col-9" id="Brand">
+                             <option>Toyota</option>
+                             <option>Mercedes</option>
+                             <option>BMW</option>
+                             <option>Perodua</option>
+                             <option>Suzuki</option>
+                         </select>
+                     </div>
+                 </div>
+                 <div class="col">
+                     <div>
+                         <label>Fuel type</label>
+                         <select class="form-control form-control-sm col-9" id="Fueltype">
+                             <option>Diesel</option>
+                             <option>Petrol</option>
+                         </select>
+                     </div>
+                 </div>
+             </div>
+
+                <div class="row mt-3">
+                    <div class="col">
+                        <button class="btn btn-warning mb-1" id="searchAcar">Search</button> <br>
+                        <label>Car Name:</label>
+                        <select class="form-control form-control-sm col-9" id="Car_name">
+
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <img src="../assests/img/Cars/2021-GLA250-AMG-LINE-SUV-AVP-DR.png" width="450px">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <img src="../assests/img/Cars/2021-GLA250-AMG-LINE-SUV-AVP-DR.png" width="450px">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <img src="../assests/img/Cars/2021-GLA250-AMG-LINE-SUV-AVP-DR.png" width="450px">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <img src="../assests/img/Cars/2021-GLA250-AMG-LINE-SUV-AVP-DR.png" width="450px">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <label for="uploadBankSlip1">Upload Bank slip</label>
+                        <input type="file" class="form-control-file" id="uploadBankSlip1">
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="makeRental">Finish Rental</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--footer-->
+<footer>
+    <section style="background-color:#2A3852;" class="event-footer">
+
+        <div class="row footer-top">
+
+            <div class="col-xs-12 col-md-2 event-footer-section">
+                <div class="event-footer-Maintitles" style="font-family:'Open Sans', sans-serif; font-size: 20px">
+                    <p>Easy Car Rental</p>
+                </div>
+                <a href="" target="_self">
+                    <div class="event-footer-img"><img src="../assests/img/icons(Logo)/icons8-car-90White.png">
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-xs-12 col-md-4 event-footer-section">
+                <div class="event-footer-Maintitles" style="">
+                    <P>Related Searches</P>
+                </div>
+                <div class="event-footer-content" id="footerlinks2">
+                    <ul>
+                        <li class="text-light">Genaral car</li>
+                        <li class="text-light">Primium car</li>
+                        <li class="text-light">Luxary car</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <div class="col-xs-12 col-md-3 event-footer-section">
+                <div class="event-footer-Maintitles" style="">
+                    Help & Information
+                </div>
+                <div class="event-footer-content" style="">
+                    <li class="text-light">About Us</li>
+                    <li class="text-light">Contact Us</li>
+                    <li class="text-light">Help</li>
+                    <div><button type="button" class="btn btn-info" style="
+    margin-top: 20px;
+">Sign up</button></div>
+
+                </div>
+
+            </div>
+
+            <div class="col-xs-12 col-md-3 event-footer-section bottom-social-group">
+
+                <div class="event-footer-Maintitles" style=" ">Find Us On</div>
+                <a class="event-footer-social" title="Facebook link" target="_blank" href="">
+                    <img src="../assests/img/socialicons/icons8-facebook-100.png" width="30px">
+                </a>
+                <a class="event-footer-social" title="Twitter link" target="_blank" href="">
+                    <img src="../assests/img/socialicons/icons8-twitter-96.png" width="30px">
+                </a>
+                <a class="event-footer-social" title="Instagram link" target="_blank" href="">
+                    <img src="../assests/img/socialicons/icons8-instagram-120.png" width="30px">
+                </a>
+                <a class="event-footer-social" title="Youtube link" target="_blank" href="">
+                    <img src="../assests/img/socialicons/icons8-youtube-120.png" width="30px">
+                </a>
+                <br><br>
+            </div>
+
+        </div>
+
+        <div class="row footer-bottom">
+            <div class="event-footer-bottom col-xs-12 col-md-12">
+        <span class="bottom-elements">
+         <span class="bottom-elements">
+           <p>Copyright © 2020 easycarent.com Transport Limited trading as easycarent.com. All rights reserved</p>
+        </span>
+        </span>
+            </div>
+
+        </div>
+
+    </section>
+</footer>
+
+<script src="../assests/frm/js/customjs/regUser.js"></script>
+<!--<script src="../assests/frm/js/customjs/Guest.js"></script>-->
+
+</body>
+</html>

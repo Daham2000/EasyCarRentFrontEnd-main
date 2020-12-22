@@ -1,0 +1,240 @@
+body{
+    overflow-x: hidden;
+}
+
+#navbar{
+    background-color: #154360;
+    position: fixed;
+    width: 100%;
+}
+.nav-btn>a{
+    color: white;
+}
+.nav-btn>a:hover{
+    color: #ececec;
+}
+
+/*section01*/
+#section1{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+#input1search{
+    display: flex;
+    flex-direction: row;
+}
+#section1>div>p{
+    font-size: 25px;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+/*section2*/
+#section2{
+    position: absolute;
+    top: 250px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#section2>div{
+    width: 300px;
+}
+#section2>div>p{
+    font-size: 25px;
+    font-family: 'Open Sans', sans-serif;
+}
+#section2imgslogo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+#img2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 82%;
+    margin-top: 10px;
+}
+#section2imgslogo>div>img{
+    margin-right: 25px;
+}
+
+/*section3*/
+#section3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    top: 440px;
+    left: 240px;
+    width: 80%;
+}
+#section3part2_0{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
+    width: 80%;
+}
+#section3>section>div{
+    position: relative;
+
+}
+section>section>div>p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 22px;
+}
+#section3part2_1{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
+    top: 1100px;
+    width: 80%;
+}
+#section3part2{
+
+}
+
+/*section4*/
+#section4{
+    position: relative;
+}
+#section4>p:nth-child(1){
+    font-family: 'Comfortaa', cursive;
+    font-size: 23px;
+    color: #1572B6;
+    margin-top: 35px;
+    margin-bottom: 0;
+}
+#section4>p:nth-child(2){
+    font-family:'Open Sans', sans-serif;
+    font-size: 15px;
+}
+
+/*section5*/
+#section5{
+    width: 75%;
+    margin-left: 15px;
+}
+#section5>p:nth-child(1){
+    font-family: 'Open Sans', sans-serif;
+    font-size: 25px;
+    margin-top: 20px;
+    margin-bottom: 2px;
+}
+#section5>p:nth-child(2){
+    font-family: Arial;
+    font-size: 15px;
+    margin-top: 0px;
+}
+
+/*footer*/
+ection.event-footer {
+    background-color:#2A3852;
+}
+.event-footer-Maintitles {
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-family: Proxima-nova, Helvetica, Arial;
+    text-align: center;
+}
+section.event-footer a {
+    font-family: Proxima-nova, Helvetica, Arial;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.event-footer-img {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.event-footer-img>img {
+    max-height: 130px;
+    max-width: 100%;
+}
+.bottom-social-group {
+    text-align: center;
+}
+
+.event-footer-content {
+    margin-bottom: 10px;
+    font-weight: 100;
+}
+
+.event-footer-bottom {
+    padding: 15px 0px;
+}
+
+.row {
+    margin: 0px;
+}
+
+.event-footer-bottom {
+    background-color: rgba(00, 00, 00, 0.13);
+    text-align: center;
+    color: #ffffff;
+}
+
+.event-footer span {
+    font-size: 17px;
+    color: #ffffff;
+    font-weight: 100;
+}
+
+span.bottom-elements {
+    padding: 0px 10px;
+}
+
+span.bottom-elements:hover {
+    opacity: 0.5;
+    transition: 0.4s;
+}
+
+@media (min-width: 768px) {
+    .event-footer-section {
+        padding: 45px 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .event-footer-section {
+        padding: 20px;
+    }
+
+    .event-footer-section {
+        text-align: center;
+    }
+}
+
+#footer{
+    position: relative;
+    right: 240px;
+    width: 100vw;
+}
+.event-footer-social{
+    width: 20px;
+}
+#footerlinks2>li{
+    cursor: pointer;
+}
+
+#loginsidebar{
+    background-color: #154360;
+    width: 400px;
+    height: 100%;
+}

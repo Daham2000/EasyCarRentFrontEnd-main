@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Admin panel</title>
+
+    <link rel="icon" href="../assests/img/icons(Logo)/icons8-car-90withback.png">
+    <link rel="stylesheet" href="../assests/frm/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assests/frm/css/customCSS/dashboardCSS.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<nav class="navbar navbar-light" id="navbar" style="z-index: 1">
+    <a class="navbar-brand text-dark" href="#" id="headerId">
+        <img src="../assests/img/icons(Logo)/icons8-car-90.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+        Easy Car Rantal
+    </a>
+
+    <div class="btn-group">
+        <a class="btn btn-sm btn">
+            <img src="../assests/img/icons(Logo)/icons8-bell-96.png" width="25" height="26">
+        </a>
+        <a class="btn btn-sm btn" type="button" href="index.html" id="loginbtn">Logout</a>
+    </div>
+
+</nav>
+
+<main id="main">
+
+    <div class="sidenav">
+        <div class="sidebox">
+            <img src="../assests/img/icons(Logo)/icons8-dashboard-100.png" width="20px" height="20px">
+            <a id="dashbtn" class="btnsofside">Dashboard</a>
+        </div>
+        <div class="sidebox">
+            <img src="../assests/img/icons(Logo)/icons8-receive-euro-100.png" width="20px" height="20px">
+            <a id="calcincomebtn" class="btnsofside">Calc income</a>
+        </div>
+        <div class="sidebox">
+            <img src="../assests/img/icons(Logo)/icons8-request-service-100.png" width="20px" height="20px">
+            <a id="viewrentalreqbtn" class="btnsofside">View Rental request</a>
+        </div>
+        <div class="sidebox">
+            <img src="../assests/img/icons(Logo)/icons8-customer-insight-90.png" width="20px" height="20px">
+            <a id="viewcustomersbtn" class="btnsofside">View Customers</a>
+        </div>
+        <div class="sidebox">
+            <img src="../assests/img/icons(Logo)/icons8-car-96.png" width="20px" height="20px">
+            <div class="dropdown">
+                <a class="btn dropdown-toggle text-light" id="dropdownMenuButton" data-toggle="dropdown">Manage Cars</a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item text-dark" id="addCar">Add a new Car</a>
+                    <a class="dropdown-item text-dark" id="editCar">Update car</a>
+                    <a class="dropdown-item text-dark" id="removeacarbtn">Remove Car</a>
+                    <a class="dropdown-item text-dark" id="viewAllarsbtn">View All Cars here</a>
+                    <a class="dropdown-item text-dark" id="addToMaintainencebtn" data-toggle="modal" data-target="#staticBackdrop">Add to maintainance</a>
+                </div>
+            </div>
+        </div>
+        <div class="sidebox">
+            <img src="../assests/img/icons(Logo)/icons8-bell.png" width="20px" height="20px">
+            <a class="btnsofside">Notifications</a>
+        </div>
+    </div>
+
+    <div class="dashboard">
+        <div id="dashtopic">
+            <p id="dashboardtopic">Dashboard</p>
+        </div>
+
+        <div id="dailysummery">
+            <p id="dailysumm">Daily Summery</p>
+            <section id="dailysummdivs">
+                <div class="dailysumsubdivs">
+                    <img src="../assests/img/icons(Logo)/icons8-administrator-male-96.png" width="55px" height="50px">
+                    <p id="numofcustomers">25</p>
+                    <p>Number of customers</p>
+                </div>
+                <div class="dailysumsubdivs">
+                    <img src="../assests/img/icons(Logo)/icons8-driver-100.png" width="45px" height="40px">
+                    <p id="avalibledrivernum">25</p>
+                    <p>Avaliable drivers</p>
+                </div>
+                <div class="dailysumsubdivs">
+                    <img src="../assests/img/icons(Logo)/icons8-car-96.png" width="55px" height="50px">
+                    <p id="Avaliablecars">25</p>
+                    <p>Avaliable cars</p>
+                </div>
+                <div class="dailysumsubdivs">
+                    <img src="../assests/img/icons(Logo)/icons8-car-rental-100.png" width="55px" height="50px">
+                    <p id="numofRentals ">25</p>
+                    <p># of Rentals </p>
+                </div>
+                <div class="dailysumsubdivs">
+                    <img src="../assests/img/icons(Logo)/icons8-car-96.png" width="55px" height="50px">
+                    <p id="Carsundermaintenance">05</p>
+                    <p>Cars under maintenance</p>
+                </div>
+            </section>
+        </div>
+
+        <section id="addAcar" style="display: none">
+            <p id="addCartopic">Add a car</p>
+            <section id="inputFields" class="container-fluid">
+                <input class="form-control form-control-sm col-9" type="text" id="brandinp" placeholder="Brand">
+                <select class="form-control form-control-sm col-9" id="fuelTypeinp">
+                    <option>Diesel</option>
+                    <option>Petrol</option>
+                </select>
+                <input class="form-control form-control-sm col-9" type="text" id="Car_name" placeholder="Car Name">
+                <select class="form-control form-control-sm col-9" id="Typeinp">
+                    <option>General</option>
+                    <option>Premium</option>
+                    <option>Luxury</option>
+                </select>
+                <input class="form-control form-control-sm col-9" type="text" id="Dailyrateinp" placeholder="Daily rate">
+                <input class="form-control form-control-sm col-9" type="number" id="Numberofpassengersinp" placeholder="Number of passengers">
+                <input class="form-control form-control-sm col-9" type="text" id="Monthlyrateinp" placeholder="Monthly rate">
+                <select class="form-control form-control-sm col-9" id="Transmissiontypeinp">
+                    <option>Auto</option>
+                    <option>Manuel</option>
+                </select>
+                <input class="form-control form-control-sm col-9" type="text" id="freeminp" placeholder="Free mileage for the price and duration">
+                <input class="form-control form-control-sm col-9" type="text" id="PricefoextraKMinp" placeholder="Price for extra KM">
+                <input class="form-control form-control-sm col-9" type="text" id="regnuminp" placeholder="Registration number">
+                <input class="form-control form-control-sm col-9" type="text" id="colorinp" placeholder="Color">
+                <input class="form-control form-control-sm col-9" type="number" id="freemileage" placeholder="Free Mileage for the price and duration">
+                <div class="form-group">
+                    <label for="FrontViewid" class="viewformlabel">Front View</label>
+                    <input type="file" class="form-control-file viewformlabel" id="FrontViewid">
+                </div>
+                <div class="form-group">
+                    <label for="BackViewid" class="viewformlabel">Back View</label>
+                    <input type="file" class="form-control-file viewformlabel" id="BackViewid">
+                </div>
+                <div class="form-group">
+                    <label for="SideViewid" class="viewformlabel">Side View</label>
+                    <input type="file" class="form-control-file viewformlabel" id="SideViewid">
+                </div>
+                <div class="form-group">
+                    <label for="Interior" class="viewformlabel">Interior</label>
+                    <input type="file" class="form-control-file viewformlabel" id="Interior">
+                </div>
+                <button type="button" class="btn btn-warning col-9" id="saveAction">Save</button>
+            </section>
+        </section>
+
+        <section id="editAcar" style="display: none">
+            <p id="editCartopic">Edit a car</p>
+            <select class="form-control form-control-sm col-3 mb-3" id="selectCar">
+
+            </select>
+            <section id="inputFields2" class="container-fluid">
+                <div>
+                    <label>Brand:</label>
+                    <input class="form-control form-control-sm col-9" type="text" placeholder="Brand" id="Brand3">
+                </div>
+                <div>
+                    <label>Car Name:</label>
+                    <input class="form-control form-control-sm col-9" type="text" placeholder="Brand" id="carName">
+                </div>
+                <div>
+                    <label>Fuel Type:</label>
+                    <input class="form-control form-control-sm col-9" type="text" placeholder="Fuel Type" id="ftype">
+                </div>
+                <div>
+                    <label>Type:</label>
+                    <input class="form-control form-control-sm col-9" type="text" placeholder="Type" id="Type">
+                </div>
+                <div>
+                    <label>Daily rate:</label>
+                    <input class="form-control form-control-sm col-9" type="text" placeholder="Daily rate" id="drate">
+                </div>
+                <div>
+                    <label>Number of passengers:</label>
+                    <input class="form-control form-control-sm col-9" type="text" placeholder="Number of passengers" id="numofpas">
+                </div>
+                <div>
+                    <label>Monthly rate:</label>
+                    <input class="form-control form-control-sm col-9" type="text" placeholder="Monthly rate" id="mothlyrate">
+                </div>
+                <div>
+                    <label>Transmission type:</label>
+                    <input class="form-control form-control-sm col-9" type="text" placeholder="Transmission type" id="tratype">
+                </div>
+                <div>
+                    <label>Free mileage for the price and duration:</label>
+                    <input class="form-control form-control-sm col-9" type="text" placeholder="Free mileage for the price and duration" id="freem">
+                </div>
+                <div>
+                    <label>Price for extra KM:</label>
+                    <input class="form-control form-control-sm col-9" type="text" placeholder="Price for extra KM" id="priceforkm">
+                </div>
+                <div>
+                    <label>Registration number:</label>
+                    <input class="form-control form-control-sm col-9" type="text" placeholder="Registration number" id="regnumber">
+                </div>
+                <div>
+                    <label>Color:</label>
+                    <input class="form-control form-control-sm col-9" type="text" placeholder="Color" id="color">
+                </div>
+                <div class="form-group">
+                    <label for="FrontViewid" class="viewformlabel">Front View</label>
+                    <input type="file" class="form-control-file viewformlabel" id="FrontViewidedit">
+                </div>
+                <div class="form-group">
+                    <label for="BackViewid" class="viewformlabel">Back View</label>
+                    <input type="file" class="form-control-file viewformlabel" id="BackViewidedit">
+                </div>
+                <div class="form-group">
+                    <label for="SideViewid" class="viewformlabel">Side View</label>
+                    <input type="file" class="form-control-file viewformlabel" id="SideViewidedit">
+                </div>
+                <div class="form-group">
+                    <label for="Interior" class="viewformlabel">Interior</label>
+                    <input type="file" class="form-control-file viewformlabel" id="Interioredit">
+                </div>
+                <button type="button" class="btn btn-warning col-9" id="editCarAction">Update</button>
+            </section>
+        </section>
+
+        <section id="removeAcar" style="display: none">
+            <p id="removeAcartopic">Remove a car...</p>
+            <select class="form-control form-control-sm col-3 mb-3" id="selectCar2">
+
+            </select>
+            <section id="inputFields3" class="container-fluid">
+                <div>
+                    <label>Brand:</label>
+                    <input class="form-control form-control-sm col-9" type="text" placeholder="Brand" id="b">
+                </div>
+                <div>
+                    <label>Car Name:</label>
+                    <input class="form-control form-control-sm col-9" type="text" placeholder="CarName" id="carname2">
+                </div>
+                <div>
+                    <label>Fuel Type:</label>
+                    <input class="form-control form-control-sm col-9" type="text" placeholder="Fuel Type" id="ftype2">
+                </div>
+                <div>
+                    <label>Type:</label>
+                    <input class="form-control form-control-sm col-9" type="text" placeholder="Type" id="type2">
+                </div>
+                <div>
+                    <label>Daily rate:</label>
+                    <input class="form-control form-control-sm col-9" type="text" placeholder="Daily rate" id="dailyrate2">
+                </div>
+                <div>
+                    <label>Number of passengers:</label>
+                    <input class="form-control form-control-sm col-9" type="text" placeholder="Number of passengers" id="numofpass2">
+                </div>
+                <div>
+                    <label>Monthly rate:</label>
+                    <input class="form-control form-control-sm col-9" type="text" placeholder="Monthly rate" id="mrate2">
+                </div>
+                <div>
+                    <label>Transmission type:</label>
+                    <input class="form-control form-control-sm col-9" type="text" placeholder="Transmission type" id="tratype2">
+                </div>
+                <div>
+                    <label>Free mileage for the price and duration:</label>
+                    <input class="form-control form-control-sm col-9" type="text" placeholder="Free mileage for the price and duration" id="freemi2">
+                </div>
+                <div>
+                    <label>Price for extra KM:</label>
+                    <input class="form-control form-control-sm col-9" type="text" placeholder="Price for extra KM" id="km2">
+                </div>
+                <div>
+                    <label>Registration number:</label>
+                    <input class="form-control form-control-sm col-9" type="text" placeholder="Registration number" id="regnum2">
+                </div>
+                <div>
+                    <label>Color:</label>
+                    <input class="form-control form-control-sm col-9" type="text" placeholder="Color" id="color2">
+                </div>
+                <div>
+                    <button type="button" class="btn btn-warning col-9" id="removeCarAction">Remove</button>
+                </div>
+            </section>
+        </section>
+
+        <section id="viewAllCarshere" style="display: none">
+
+            <p id="ViewAcartopic">View All Cars here</p>
+            <select class="form-control form-control-sm col-3 mb-3" id="selectCar3">
+
+            </select>
+            <section id="labelsofViewAll">
+                <div>
+                    <label>Car Name:</label> <br>
+                    <input class="form-control form-control-sm col-9" id="carName5" type="text">
+                </div>
+                <div>
+                    <label>Select car type</label>
+                    <select class="form-control form-control-sm col-9" id="Selectcartype">
+                        <option>General</option>
+                        <option>Premium</option>
+                        <option>Luxury</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Transmission type</label>
+                    <select class="form-control form-control-sm col-9" id="Transmissiontype">
+                        <option>Manual</option>
+                        <option>Auto</option>
+                    </select>
+                </div>
+                <div>
+                    <label>No of passengers</label>
+                    <select class="form-control form-control-sm col-9" id="Noofpassengers">
+                        <option>1-4</option>
+                        <option>4-10</option>
+                        <option>10-20</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Price (daily)</label>
+                    <select class="form-control form-control-sm col-9" id="Price">
+                        <option>below 5000</option>
+                        <option>greater than 5000</option>
+                        <option>greater than 10000</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Brand</label>
+                    <select class="form-control form-control-sm col-9" id="Brand">
+                        <option>Toyota</option>
+                        <option>Mercedes</option>
+                        <option>BMW</option>
+                        <option>Perodua</option>
+                        <option>Suzuki</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Fuel type</label>
+                    <select class="form-control form-control-sm col-9" id="Fueltype">
+                        <option>Diesel</option>
+                        <option>Petrol</option>
+                    </select>
+                </div>
+                <button type="button" class="btn btn-warning col-2 mt-1" id="searchtoView">Search</button>
+            </section>
+
+            <section id="carDetails" class="mt-5 mb-3">
+                <section id="inputFields4" class="container-fluid">
+                    <div>
+                        <label class="" type="text" >Brand: </label>
+                        <label id="brandofViewCar"></label>
+                    </div>
+                    <div>
+                        <label class="" type="text" >Car Name: </label>
+                        <label id="carName4"></label>
+                    </div>
+                    <div>
+                        <label class="" type="text" >Fuel Type: </label>
+                        <label id="fueltypeofViewCar"></label>
+                    </div>
+                    <div>
+                        <label class="" type="text" >Type: </label>
+                        <label id="typeofViewCar"></label>
+                    </div>
+                    <div>
+                        <label class="" type="text" >Daily rate: </label>
+                        <label id="dailyrateViewCar"></label>
+                    </div>
+                    <div>
+                        <label class="" type="text" >Number of passengers: </label>
+                        <label id="numodpassenViewCar"></label>
+                    </div>
+                    <div>
+                        <label class="" type="text" >Monthly rate: </label>
+                        <label id="monthlyViewCar"></label>
+                    </div>
+                    <div>
+                        <label class="" type="text" >Transmission type: </label>
+                        <label id="transmisionViewCar"></label>
+                    </div>
+                    <div>
+                        <label class="" type="text" >Free mileage for the price and duration: </label>
+                        <label id="freemilieageViewCar"></label>
+                    </div>
+                    <div>
+                        <label class="" type="text" >Price for extra KM: </label>
+                        <label id="priceforExtraViewCar"></label>
+                    </div>
+                    <div>
+                        <label class="" type="text" >Registration number: </label>
+                        <label id="regnumberViewCar"></label>
+                    </div>
+                    <div>
+                        <label class="" type="text" >Color: </label>
+                        <label id="colorViewCar"></label>
+                    </div>
+                    <div>
+                        <label class="" type="text" >Avalibility: </label>
+                        <label id="Avalibility"></label>
+                    </div>
+
+                </section>
+                <section id="photosofcar">
+                    <div><img src=""></div>
+                    <div><img src=""></div>
+                    <div><img src=""></div>
+                    <div><img src=""></div>
+                </section>
+            </section>
+            <button type="button" class="btn btn-secondary col-2 mb-3 container-fluid" id="markasdamaged">Mark as damaged car</button>
+        </section>
+
+        <section id="addToMaintainance">
+
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">Add car to maintainence</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <select class="form-control form-control-sm col-3 mb-3" id="selectCar4">
+
+                            </select>                            <div id="labels">
+                                <div>
+                                    <label class="modellabel1">Last maintainance day:  </label>
+                                    <label id="lastmaindaylabel">2020/11/12</label>
+                                </div>
+                                <div>
+                                    <label class="modellabel1">Last rental day:  </label>
+                                    <label id="lastrentday">2019/11/11</label>
+                                </div>
+                                <div>
+                                    <label class="modellabel1">Last rental total KM:  </label>
+                                    <label id="lastrentKms">12</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" id="addtomainbtn">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="viewAllCustomershere" style="display: none" class="container">
+            <p id="ViewCustopic">View All Customers here</p>
+            <input class="form-control mb-3 ml-4" id="searchFieldCustomer" type="text" placeholder="Search customer..." style="width: 300px">
+
+            <section id="searchsection">
+                <div class="mt-4 ml-4">
+                    <input type="date" id="dateofrent" name="Rent date">
+                    <button type="button" class="btn btn-warning col-2 ml-2">Search</button>
+                </div>
+                <div class="mt-3 ml-5">
+                    <input class="form-check-input" type="checkbox" value="" id="showonlyverifiefcus">
+                    <label class="form-check-label" for="showonlyverifiefcus">
+                        Preview only unverifyed Customers
+                    </label>
+                </div>
+            </section>
+
+            <section id="table" class="mt-5">
+                <table class="table table-hover">
+                    <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Customer Name</th>
+                        <th scope="col">Customer NIC/Driving License</th>
+                        <th scope="col">Last rental date</th>
+                        <th scope="col">Verification status</th>
+                        <th scope="col">Contact number</th>
+                        <th scope="col">Address</th>
+                        <th scope="col">Driving License number</th>
+                        <th scope="col">Driver name</th>
+                        <th scope="col">Email</th>
+                    </tr>
+                    </thead>
+                    <tbody id="allCusbody">
+
+                    </tbody>
+                </table>
+                <button type="button" class="btn btn-secondary col-3 container-fluid mb-3" id="verifybtn">Verify selected customer</button>
+            </section>
+            
+            <section id="NicandDrivingPhoto" class="container col-9 mb-3">
+                <img src="" alt="">
+                <img src="" alt="">
+            </section>
+            
+        </section>
+
+        <section id="ViewRentReq" style="display: none">
+            <section id="tableofrentreqset" class="container-fluid">
+                <table class="table mt-5" id="reqTable">
+                    <thead class="table table-striped">
+                    <tr>
+                        <th scope="col">Customer Name</th>
+                        <th scope="col">Customer NIC/Driving License</th>
+                        <th scope="col">Pickup date</th>
+                        <th scope="col">Pickup venue</th>
+                        <th scope="col">return venue</th>
+                        <th scope="col">return date</th>
+                        <th scope="col">Driver Name</th>
+                        <th scope="col">Bank Slip id</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>@mdo</td>
+                        <td>@mdo</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section id="btnsofrentreqView" class="container mt-3">
+                <button type="button" class="btn btn-outline-success col-3 mb-1">Verify selected Rental</button>
+                <br>
+                <button type="button" class="btn btn-outline-danger col-3">Deny selected Rental</button>
+            </section>
+
+            <section id="paymentView" class="container mt-5">
+
+                <input class="form-control form-control-sm col-4" type="text" placeholder="Loss Damage Waiver:">
+                <input class="form-control form-control-sm col-4" type="text" placeholder="Total rent days:">
+                <input class="form-control form-control-sm col-4" type="text" placeholder="Damage fee:">
+                <input class="form-control form-control-sm col-4" type="text" placeholder="Rent fee:">
+                <input class="form-control form-control-sm col-4" type="text" placeholder="Total payment:">
+
+                <button type="button" class="btn btn-outline-dark col-3 mb-3">Make Payment</button>
+
+            </section>
+        </section>
+
+        <section id="calcincomeView" style="display: none">
+            <section id="CalcDailyincome" class="mb-5">
+                <label for="calc1" style="font-size: 22px">Calc Daily income</label>
+                <section id="calc1" class="col-4 mt-3">
+                    <label for="totalrentfeeday">Total rental fees:</label>
+                    <input class="form-control form-control-sm col-8 ml-2" type="number" placeholder="" id="totalrentfeeday">
+                    <label for="totaldayserviefee">Reduce service fees:</label>
+                    <input class="form-control form-control-sm col-8 ml-2" type="number" placeholder="" id="totaldayserviefee">
+                </section>
+                <div>
+                    <p id="totaldayincome" class="mb-0 col-3">
+                        Rs 1500
+                    </p>
+                    <p id="totaldayincome2" class="mt-0 col-3">
+                        Daily income
+                    </p>
+                </div>
+                <button type="button" class="btn btn-primary col-4">Finish calculation</button>
+
+            </section>
+
+            <section id="CalcWeeklyincome" class="mb-5">
+                <label for="calc2" style="font-size: 22px">Calc Weekly income</label>
+                <section id="calc2" class="col-4 mt-3">
+                    <label for="totalrentfeeweek">Total rental fees:</label>
+                    <input class="form-control form-control-sm col-8 ml-2" type="number" placeholder="" id="totalrentfeeweek">
+                    <label for="totalweekserviefee">Reduce service fees:</label>
+                    <input class="form-control form-control-sm col-8 ml-2" type="number" placeholder="" id="totalweekserviefee">
+                </section>
+                <div>
+                    <p id="totalweekincome" class="mb-0 col-3">
+                        Rs 253000
+                    </p>
+                    <p id="totalweekincome2" class="mt-0 col-3">
+                        Week income
+                    </p>
+                </div>
+                <button type="button" class="btn btn-primary col-4">Finish calculation</button>
+
+            </section>
+
+            <section id="CalcMonthincome" class="mb-5">
+                <label for="calc3" style="font-size: 22px">Calc Monthly income</label>
+                <section id="calc3" class="col-4 mt-3">
+                    <label for="totalrentfeeday">Total rental fees:</label>
+                    <input class="form-control form-control-sm col-8 ml-2" type="number" placeholder="" id="totalrentfeeday">
+                    <label for="totaldayserviefee">Reduce service fees:</label>
+                    <input class="form-control form-control-sm col-8 ml-2" type="number" placeholder="" id="totaldayserviefee">
+                </section>
+                <div>
+                    <p id="totalmonthincome" class="mb-0 col-3">
+                        Rs 45200
+                    </p>
+                    <p id="totalmonthincome2" class="mt-0 col-3">
+                        Daily income
+                    </p>
+                </div>
+                <button type="button" class="btn btn-primary col-4">Finish calculation</button>
+
+            </section>
+
+            <section id="CalcYearlyincome">
+                <label for="calc3" style="font-size: 22px">Calc Yearly income</label>
+                <section id="calc4" class="col-4 mt-3">
+                    <label for="totalrentfeeyear">Total rental fees:</label>
+                    <input class="form-control form-control-sm col-8 ml-2" type="number" placeholder="" id="totalrentfeeyear">
+                    <label for="totaldayserviefeeyear">Reduce service fees:</label>
+                    <input class="form-control form-control-sm col-8 ml-2" type="number" placeholder="" id="totaldayserviefeeyear">
+                </section>
+                <div>
+                    <p id="totalyearlyincome" class="mb-0 col-3">
+                        Rs 1500000
+                    </p>
+                    <p id="totalyearlyincome2" class="mt-0 col-3">
+                        Daily income
+                    </p>
+                </div>
+                <button type="button" class="btn btn-primary col-4">Finish calculation</button>
+
+            </section>
+        </section>
+
+    </div>
+
+
+</main>
+
+<script src="../assests/lib/jquery-3.5.1.min.js"></script>
+<script src="../assests/frm/js/bootstrap.js"></script>
+<script src="../assests/frm/js/bootstrap.min.js"></script>
+<script src="../assests/frm/js/bootstrap.bundle.js"></script>
+<script src="../assests/frm/js/customjs/dashboard.js"></script>
+
+</body>
+</html>

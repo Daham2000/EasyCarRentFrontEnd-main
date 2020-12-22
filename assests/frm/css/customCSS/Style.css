@@ -1,0 +1,61 @@
+#headerId{
+    font-family: 'Open Sans', sans-serif;
+}
+
+#navbar{
+    background-color: #fffef6;
+}
+
+#signupbtn:hover{
+    color: #2e000c;
+}
+
+#mainid{
+}
+
+body{
+    background-color: #f0ebeb;
+    overflow-x: hidden;
+}
+
+#loginbtn{
+    font-family: 'Open Sans', sans-serif;
+    margin-left: 10px;
+}
+#loginbtn:hover{
+    color: #154360;
+}
+
+#mainbackgrounds{
+    width: 100vw;
+    height: 90vh;
+    background: lightblue url("../../../img/Background/M3ilZL.jpg")no-repeat fixed center;
+    position: relative;
+}
+#subdiv{
+    width: 50%;
+    height: 80%;
+    background-color: #fffef6;
+    position: absolute;
+    opacity: 0.8;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+#text1{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    width: 60%;
+}
+
+#label1,#label2{
+    font-size: 15px;
+}
+

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Driver Summery - Easy Car Rental</title>
+    <link rel="icon" href="../assests/img/icons(Logo)/icons8-car-90withback.png">
+    <link rel="stylesheet" href="../assests/frm/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assests/frm/css/customCSS/Style.css">
+    <link rel="stylesheet" href="../assests/frm/css/customCSS/driver.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<!-- Image and text -->
+<nav class="navbar navbar-light" id="navbar">
+    <a class="navbar-brand text-dark" href="#" id="headerId">
+        <img src="../assests/img/icons(Logo)/icons8-car-90.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+        Easy Car Rantal
+    </a>
+
+    <div class="btn-group">
+        <a class="btn btn-sm btn">
+            <img src="../assests/img/icons(Logo)/icons8-bell-96.png" width="25" height="26">
+        </a>
+        <a class="btn btn-sm btn" type="button" href="index.html" id="loginbtn">Logout</a>
+    </div>
+
+</nav>
+
+<main>
+    <div class="row">
+        <div class="col mt-3 ml-5">
+            <label>Name: </label>
+            <label id="drivername">Sarath Perera</label>
+        </div>
+    </div>
+
+    <div class="row" id="tablehead" style="position: relative">
+        <div class="col">
+
+        </div>
+    </div>
+
+    <table class="table table-hover container mt-3" >
+        <caption>View your schedule</caption>
+        <thead>
+        <tr>
+            <th scope="col">Customer_Name</th>
+            <th scope="col">Contact number</th>
+            <th scope="col">Pick up date</th>
+            <th scope="col">Drop off date</th>
+        </tr>
+        </thead>
+        <tbody id="drivertblbody">
+
+        </tbody>
+    </table>
+
+</main>
+
+<script src="../assests/lib/jquery-3.5.1.min.js"></script>
+<script src="../assests/frm/js/bootstrap.js"></script>
+<script src="../assests/frm/js/bootstrap.min.js"></script>
+<script src="../assests/frm/js/bootstrap.bundle.js"></script>
+<script src="../assests/frm/js/customjs/Driver.js"></script>
+</body>
+</html>
